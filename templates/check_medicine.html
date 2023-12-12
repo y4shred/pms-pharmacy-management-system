@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Medicine</title>
+</head>
+<body>
+    <h1>Check Medicine</h1>
+    <ul>
+        {% for medicine, quantity in medicines.items() %}
+            <li>{{ medicine }} - Quantity: {{ quantity }} - Inventory: {{ inventory.get(medicine, 0) }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
